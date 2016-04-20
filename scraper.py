@@ -7,8 +7,9 @@ import lxml.html
 # # Read in a page
 # html = scraperwiki.scrape("http://foo.com")
 
-pcode = 2000
-html = scraperwiki.scrape("http://www.censusdata.abs.gov.au/census_services/getproduct/census/2011/quickstat/POA"+str(pcode))
+postcodes = [2000, 2001, 2002, 2601, 2601]
+for pc in postcodes
+  html = scraperwiki.scrape("http://www.censusdata.abs.gov.au/census_services/getproduct/census/2011/quickstat/POA"+str(pc))
 #
 # # Find something on the page using css selectors
 # root = lxml.html.fromstring(html)
